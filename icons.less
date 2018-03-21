@@ -1,0 +1,1450 @@
+@charset "utf-8";
+@front: #333;
+@back: #fff;
+
+// 默认尺寸为iconfont库demo尺寸1/3
+body {
+    background: @back;
+}
+.icon-box {
+    margin-bottom: 40px;
+    display: inline-block;
+    position: relative;
+    padding: 14px;
+    vertical-align: top;
+    font-size: 0;
+    .icon {
+        display: inline-block;
+        position: relative;
+        color: @front;
+        &:before, &:after {
+            position: absolute;
+            content: '';
+        } 
+    }
+    p {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+
+
+.icon-like{
+    width: 0;
+    height: 0;
+    margin: 5px 18px 17px 4px;
+    border: 7px solid;
+    border-radius: 50%;
+    box-shadow: 14px 0 0;
+    &:before {
+        right: -7px;
+        width: 0;
+        height: 0;
+        border: solid;
+        border-width: 9px 7px;
+        border-radius: 0 0 0 100%;
+        transform: skew(0deg,10deg);
+    }
+    &:after {
+        left: 7px;
+        width: 0px;
+        height: 0;
+        border: solid;
+        border-width: 9px 7px;
+        border-radius: 0 0 100% 0;
+        transform: skew(0deg,-10deg);
+    }
+}
+
+.icons-v {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    margin: 8px 4px 0px 4px;
+    &:before {
+        width: 5px;
+        height: 4px;
+        box-shadow: inset 0 0 0 10px, 4px 0 0, 23px 0 0;
+    }
+    &:after {
+        top: 12px;
+        left: 14px;
+        width: 2px;
+        height: 7px;
+        transform: skew(-30deg,60deg);
+        box-shadow: inset 0 0 0 32px, -2px 0 0, -4px 0 0, -6px 0 0, -8px 0 0, 0 -7px 0, 0 -14px;
+    }
+}
+.icon-v {
+    width: 28px;
+    height: 24px;
+    border-top: 4px solid;
+    margin: 4px;
+    &:before {
+        top: -3px;
+        left: 1px;
+        border-style: solid;
+        border-width: 22px 13px;
+        border-color: @front transparent transparent transparent;
+    }
+    &:after {
+        top: -5px;
+        left: 8px;
+        border-style: solid;
+        border-width: 13px 8px;
+        border-color: @back transparent transparent transparent;
+    }
+}
+
+.icon-book {
+    width: 21px;
+    height: 2px;
+    margin: 5px 7px 4px 6px;
+    border-style: solid;
+    border-width: 1px 1px 24px 1px;
+    border-color: @front;
+    border-radius: 2px;
+    &:before {
+        width: 1px;
+        height: 1px;
+        top: 2px;
+        left: 2px;
+        color: @back;
+        box-shadow: inset 0 0 0 1px, -1px 0, -2px 0, 1px 0,2px 0,3px 0,4px 0,5px 0,6px 0,7px 0,8px 0,14px 0,15px 0,16px 0,17px 0,18px 0,19px 0,19px -1px,19px -2px, 0 1px,0 2px,0 3px,0 4px,0 5px,0 6px,0 7px,0 8px,0 9px,0 10px,0 11px,0 12px,0 13px,0 14px,0 15px,0 16px,0 17px,0 18px,0 19px,0 20px,0 21px,0 22px,0 23px, 8px 1px,8px 2px,8px 3px,8px 4px,8px 5px,8px 6px,8px 7px,8px 8px, 14px 1px,14px 2px,14px 3px,14px 4px,14px 5px,14px 6px,14px 7px,14px 8px;
+    }
+    &:after {
+        width: 1px;
+        height: 1px;
+        top: 8px;
+        left: 13px;
+        color: @back;
+        transform: rotate(45deg);
+        box-shadow: inset 0 0 0 2px,0 1px,0 2px,0 3px,0 4px,1px 0,2px 0,3px 0,4px 0;
+    }
+}
+
+.icon-book2 {
+    margin: 5px 9px 7px 8px;
+    width: 18px;
+    height: 23px;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-radius: 0 0 0 2px;
+    box-shadow: inset 0 0 0 30px, 0 1px 0 2px, -1px -2px 0 0, -2px -2px 0 0;
+    &:before {
+        width: 4px;
+        height: 2px;
+        top: 2px;
+        left: -4px;
+        border-radius: 1px;
+        box-shadow: inset 0 0 0 4px, 0 0 0 1px @back, 0 7px 0 0, 0 7px 0 1px @back, 0 14px 0 0, 0 14px 0 1px @back;
+    }
+    &:after {
+        top: 7px;
+        left: 5px;
+        width: 9px;
+        height: 2px;
+        border-top: 1px solid @front;
+        border-bottom: 1px solid @front;
+        box-shadow: inset 0 0 0 10px @back, 0 0 0 2px @back;
+    }
+}
+.icon-help {
+    margin: 8px 12px 16px 12px;
+    width: 6px;
+    height: 6px;
+    border: 3px solid;
+    border-color: @back @back @back @front;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 10px, -3px 3px 0 8px;
+    transform: rotate(-45deg);
+    &:before {
+        width: 4px;
+        height: 4px;
+        top: 10px;
+        right: 10px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 10px @back;
+    }
+    &:after {
+        width: 3px;
+        height: 6px;
+        top: 5px;
+        right: 6px;
+        border-radius: 2px;
+        box-shadow: inset 0 0 0 10px #fff;
+        transform: rotate(45deg);
+    }
+}
+
+.icon-v2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 12px 5px 12px;
+    border-color: @front transparent transparent transparent;
+    box-shadow: 0 -16px 0 0;
+    &:before {
+        width: 19px;
+        height: 2px;
+        top: -22px;
+        left: -9px;
+        overflow: hidden;
+        box-shadow: inset -4px 0 0 -1px @back, inset 7px 0 0 -1px @back;
+    }
+    &:after {
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        box-shadow: inset 0 0 0 1px;
+    }
+}
+
+.icon-share {
+    margin: 8px 6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 24px 10px 0;
+    border-color: transparent @front transparent transparent;
+    &:before {
+        width: 0;
+        height: 0;
+        top: -7px;
+        left: 7px;
+        border-style: solid;
+        border-width: 7px 17px 7px 0;
+        border-color: transparent @back transparent transparent;
+    }
+    &:after {
+        width: 9px;
+        height: 9px;
+        top: -4px;
+        left: 0;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 9px, 18px -8px 0 0, 18px 8px 0 0;
+    }
+}
+
+.icon-home {
+    margin: 19px 8px 5px 8px;  
+    width: 4px;
+    height: 7px;
+    border-style: solid;
+    border-width: 5px 8px 0 8px;
+    border-color: @front;
+    &:before {
+        width: 0;
+        height: 0;
+        top: -35px;
+        left: -13px;
+        border: 15px solid;
+        border-color: transparent transparent @front transparent;
+    }
+    &:after {
+        width: 4px;
+        height: 10px;
+        top: -16px;
+        left: 8px;
+        box-shadow: inset 0 0 0 10px;
+    }
+}
+.icon-mail {
+    margin: 8px 3px 9px 4px;    
+    width: 29px;
+    height: 19px;
+    overflow: hidden;
+    background: @back;
+    &:before {
+        top: 4px;
+        left: -8px;
+        width: 14px;
+        height: 14px;
+        transform: scaleY(0.8) rotate(45deg);
+        box-shadow: inset 0 0 0 10px, 15px 0px 0 0, 22px -7px 0 0, 22px -22px 0 0, 0px -22px 0 7px;
+    }
+}
+.icon-fullscreen {
+    margin: 4px 23px 23px 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 9px, 19px 0 0 0, 19px 19px 0 0, 0 19px 0 0;
+    &:before {
+        width: 22px;
+        height: 22px;
+        top: 3px;
+        left: 3px;
+        box-shadow: inset 0 0 0 22px;
+    }
+    &:after {
+        width: 8px;
+        height: 8px;
+        top: 10px;
+        left: 10px;
+        transform: rotate(45deg);
+        box-shadow: inset 0 0 0 10px @back, 7px 7px 0 1px @back, -7px 7px 0 1px @back, 7px -7px 0 1px @back, -7px -7px 0 1px @back;
+    }
+}
+
+.icon-smallscreen {
+    margin: 7px 20px 20px 7px;
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 9px, 13px 0 0 0, 13px 13px 0 0, 0 13px 0 0;
+    &:before {
+        width: 8px;
+        height: 8px;
+        top: -4px;
+        left: -4px;
+        transform: rotate(45deg);
+        box-shadow: inset 0 0 0 8px @front, 30px 0 0 0, 15px 15px 0 0, 15px -15px 0 0; 
+    }
+    &:after {
+        width: 9px;
+        height: 9px;
+        top: -9px;
+        left: 0px;
+        transform: rotate(45deg);
+        box-shadow: inset 0 0 0 8px @back, 0 13px 0 0 @back, 9px -9px 0 0 @back, 22px -9px 0 0 @back, 31px 0px 0 0 @back, 31px 13px 0 0 @back, 9px 22px 0 0 @back, 22px 22px 0 0 @back; 
+    }
+}
+
+.icon-up {
+    margin: 4px 4px;
+    width: 28px;
+    height: 28px;
+    &:before {
+        top: -13px;
+        left: 1px;
+        border: 13px solid;
+        border-color: transparent transparent @front transparent;
+    }
+    &:after {
+        top: 13px;
+        left: 9px;
+        width: 10px;
+        height: 15px;
+        box-shadow: inset 0 0 0 20px;
+    }
+}
+.icon-down {
+    margin: 4px 4px;
+    width: 28px;
+    height: 28px;
+    &:before {
+        top: 15px;
+        left: 1px;
+        border: 13px solid;
+        border-color: @front transparent transparent transparent;
+    }
+    &:after {
+        top: 0;
+        left: 9px;
+        width: 10px;
+        height: 15px;
+        box-shadow: inset 0 0 0 20px;
+    }
+}
+.icon-left {
+    margin: 4px 4px;
+    width: 28px;
+    height: 28px;
+    &:before {
+        top: 1px;
+        left: -13px;
+        border: 13px solid;
+        border-color: transparent @front transparent transparent;
+    }
+    &:after {
+        top: 9px;
+        left: 13px;
+        width: 15px;
+        height: 10px;
+        box-shadow: inset 0 0 0 20px;
+    }
+}
+.icon-right {
+    margin: 4px 4px;
+    width: 28px;
+    height: 28px;
+    &:before {
+        top: 1px;
+        left: 15px;
+        border: 13px solid;
+        border-color: transparent transparent transparent @front;
+    }
+    &:after {
+        top: 9px;
+        left: 0px;
+        width: 15px;
+        height: 10px;
+        box-shadow: inset 0 0 0 20px;
+    }
+}
+
+.icon-plus-o {
+    margin: 4px 3px 3px 4px;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 28px;
+    &:before, &:after {
+        box-shadow: inset 0 0 0 13px @back;
+    }
+    &:before {
+        width: 13px;
+        height: 3px;
+        top: 13px;
+        left: 8px;
+    }
+    &:after {
+        width: 3px;
+        height: 13px;
+        top: 8px;
+        left: 13px;
+    }
+}
+.icon-sub-o {
+    margin: 4px 3px 3px 4px;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 28px;
+    &:before, &:after {
+        box-shadow: inset 0 0 0 13px @back;
+    }
+    &:before {
+        width: 13px;
+        height: 3px;
+        top: 13px;
+        left: 8px;
+    }
+}
+.icon-x-o {
+    margin: 4px 3px 3px 4px;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 28px;
+    transform: rotate(45deg);
+    &:before, &:after {
+        box-shadow: inset 0 0 0 13px @back;
+    }
+    &:before {
+        width: 13px;
+        height: 3px;
+        top: 13px;
+        left: 8px;
+    }
+    &:after {
+        width: 3px;
+        height: 13px;
+        top: 8px;
+        left: 13px;
+    }
+}
+.icon-correct-o {
+    margin: 4px 3px 3px 4px;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 28px;
+    transform: rotate(45deg);
+    &:before, &:after {
+        box-shadow: inset 0 0 0 13px @back;
+    }
+    &:before {
+        width: 8px;
+        height: 3px;
+        top: 17px;
+        left: 10px;
+    }
+    &:after {
+        width: 3px;
+        height: 13px;
+        top: 7px;
+        left: 15px;
+    }
+}
+.icon-notice-o {
+    margin: 4px 3px 3px 4px;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 28px;
+    &:before, &:after {
+        box-shadow: inset 0 0 0 13px @back;
+    }
+    &:before {
+        width: 3px;
+        height: 12px;
+        top: 5px;
+        left: 13px;
+        border-radius: 2px;
+    }
+    &:after {
+        width: 3px;
+        height: 3px;
+        top: 19px;
+        left: 13px;
+        border-radius: 50%;
+    }
+}
+
+.icon-plus {
+    margin: 4px;
+    width: 28px;
+    height: 28px;
+    &:before, &:after {
+        box-shadow: inset 0 0 0 13px @front;
+    }
+    &:before {
+        width: 24px;
+        height: 6px;
+        top: 11px;
+        left: 2px;
+    }
+    &:after {
+        width: 6px;
+        height: 24px;
+        top: 2px;
+        left: 11px;
+    }
+}
+.icon-sub {
+    margin: 4px;
+    width: 28px;
+    height: 28px;
+    &:before, &:after {
+        box-shadow: inset 0 0 0 13px @front;
+    }
+    &:before {
+        width: 24px;
+        height: 6px;
+        top: 11px;
+        left: 2px;
+    }
+}
+.icon-x {
+    margin: 4px;
+    width: 28px;
+    height: 28px;
+    transform: rotate(45deg);
+    &:before, &:after {
+        box-shadow: inset 0 0 0 13px @front;
+    }
+    &:before {
+        width: 24px;
+        height: 6px;
+        top: 11px;
+        left: 2px;
+    }
+    &:after {
+        width: 6px;
+        height: 24px;
+        top: 2px;
+        left: 11px;
+    }
+}
+.icon-correct {
+    margin: 4px;
+    width: 28px;
+    height: 28px;
+    transform: rotate(45deg);
+    &:before, &:after {
+        box-shadow: inset 0 0 0 13px @front;
+    }
+    &:before {
+        width: 14px;
+        height: 6px;
+        top: 14px;
+        left: 4px;
+    }
+    &:after {
+        width: 6px;
+        height: 24px;
+        top: -4px;
+        left: 14px;
+    }
+}
+.icon-success-rec {
+    margin: 6px 5px 5px 6px;
+    width: 25px;
+    height: 25px;
+    box-shadow: inset 0 0 0 4px;
+    &:before {
+        transform: rotate(40deg);
+        width: 6px;
+        height: 16px;
+        top: -2px;
+        left: 17px;
+        box-shadow: inset 0 0 0 16px, 0 0 0 2px @back;
+    }
+    &:after {
+        transform: rotate(40deg);
+        width: 11px;
+        height: 6px;
+        top: 9px;
+        left: 6px;
+        box-shadow: inset 0 0 0 16px;
+    }
+}
+
+.icon-input-rec {
+    margin: 6px 5px 5px 6px;
+    width: 25px;
+    height: 25px;
+    box-shadow: inset 0 0 0 4px;
+    &:before {
+        transform: rotate(40deg);
+        width: 0;
+        height: 0;
+        top: 11px;
+        left: 7px;
+        border-style: solid;
+        border-width: 7px 3px;
+        border-color: @front transparent transparent transparent;
+        box-shadow: 0 -15px 0 0, -2px -16px 0 0 @back, 2px -16px 0 0 @back;
+    }
+    &:after {
+        transform: rotate(40deg);
+        width: 6px;
+        height: 4px;
+        top: -3px;
+        left: 23px;
+        box-shadow: inset 0 0 0 10px;
+        border-radius: 50% 50% 0 0;
+    }
+}
+
+.icon-404 {
+    margin: 7px 6px 6px 7px;
+    width: 19px;
+    height: 19px;
+    overflow: hidden;
+    border: 2px solid @back;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px;
+    &:before {
+        top: 12px;
+        left: 1px;
+        width: 11px;
+        height: 11px;
+        border: 3px solid @front;
+        border-radius: 50%;
+    }
+    &:after {
+        top: 3px;
+        left: 3px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 3px, 9px 0 0 0;
+    }
+}
+
+.icon-cart {
+    margin: 8px 6px 16px;
+    width: 18px;
+    height: 6px;
+    border: 3px solid @front;
+    border-radius: 2px;
+    &:before {
+        top: -5px;
+        left: -3px;
+        width: 18px;
+        height: 16px;
+        border-left: 3px solid @front;
+        border-bottom: 3px solid @front;
+        border-radius: 1px;
+        transform: skew(7deg);
+    }
+    &:after {
+        top: 15px;
+        left: 0px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 4px, 12px 0 0 0, -6px -22px 0
+    }
+}
+
+.icon-ipad {
+    margin: 3px 7px 4px 7px;
+    width: 16px;
+    height: 22px;
+    border-radius: 2px;
+    border: solid @front;
+    border-width: 3px 3px 4px 3px;
+    &:after {
+        width: 2px;
+        height: 2px;
+        left: 7px;
+        top: 23px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 2px @back;
+    }
+}
+
+.icon-mac {
+    margin: 7px 5px 13px 6px;
+    width: 25px;
+    height: 16px;
+    border-radius: 1px;
+    box-shadow: 0 0 0 2px, 0 2px 0 2px;
+    &:before {
+        top: 21px;
+        left: 6px;
+        width: 7px;
+        height: 3px;
+        border-style: solid;
+        border-width: 0 3px 2px 3px;
+        border-color: transparent transparent @front transparent;
+        box-shadow: inset 0 0 0 7px;
+    }
+}
+
+.icon-phone {
+    margin: 4px 9px 3px 9px;
+    width: 14px;
+    height: 20px;
+    border-radius: 2px;
+    border: solid @front;
+    border-width: 5px 2px 4px 2px;
+    &:before {
+        width: 10px;
+        height: 1px;
+        border-radius: 1px;
+        left: 2px;
+        top: -3px;
+        box-shadow: inset 0 0 0 10px @back;
+    }
+    &:after {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        left: 6px;
+        top: 21px;
+        box-shadow: inset 0 0 0 2px @back;
+    }
+}
+
+.icon-bad {
+    margin: 6px 5px 14px 6px;
+    width: 25px;
+    height: 16px;
+    box-shadow: inset 0 0 0 25px;
+    border-radius: 2px;
+    &:before {
+        width: 3px;
+        height: 2px;
+        top: 0;
+        left: 19px;
+        box-shadow: inset 0 0 0 3px @back, 0 2px 0 0 @back, 0 4px 0 0 @back, 0 6px 0 0 @back, 0 8px 0 0 @back, 0 10px 0 0 @back, 0 12px 0 0 @back, 0 14px 0 0 @back, -19px 5px 0 0 @back, -16px 5px 0 0 @back, -19px 10px  0 0 @back, -16px 10px  0 0 @back;
+    }
+    &:after {
+        top: 16px;
+        left: 13px;
+        width: 5px;
+        height: 8px;
+        border-radius: 0 0 2px 2px;
+        box-shadow: inset 0 0 0 8px;
+    }
+}
+
+.icon-good {
+    margin: 14px 5px 6px 6px;
+    width: 25px;
+    height: 16px;
+    box-shadow: inset 0 0 0 25px;
+    border-radius: 2px;
+    transform: rotate(180deg);
+    &:before {
+        width: 3px;
+        height: 2px;
+        top: 0;
+        left: 19px;
+        box-shadow: inset 0 0 0 3px @back, 0 2px 0 0 @back, 0 4px 0 0 @back, 0 6px 0 0 @back, 0 8px 0 0 @back, 0 10px 0 0 @back, 0 12px 0 0 @back, 0 14px 0 0 @back, -19px 5px 0 0 @back, -16px 5px 0 0 @back, -19px 10px  0 0 @back, -16px 10px  0 0 @back;
+    }
+    &:after {
+        top: 16px;
+        left: 13px;
+        width: 5px;
+        height: 8px;
+        border-radius: 0 0 2px 2px;
+        box-shadow: inset 0 0 0 8px;
+    }
+}
+
+.icon-reply {
+    margin: 7px 6px 10px 7px;
+    width: 23px;
+    height: 19px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 23px;
+    &:before {
+        top: 8px;
+        left: 10px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 3px @back, -6px 0 0 0 @back, 6px 0 0 0 @back;
+    }
+    &:after {
+        left: 11px;
+        top: 18px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 4px 5px;
+        border-color: transparent transparent transparent @front;
+    }
+}
+
+.icon-discuss {
+    margin: 7px 5px 11px;
+    width: 26px;
+    height: 18px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 26px;
+    &:before {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        left: 5px;
+        top: 8px;
+        box-shadow: inset 0 0 0 2px @back, 5px 0 0 0 @back, 10px 0 0 0 @back, 15px 0 0 0 @back;
+    }
+    &:after {
+        left: 7px;
+        top: 18px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 6px 6px;
+        border-color: transparent transparent transparent @front;
+    }
+}
+
+.icon-eye {
+    margin: 8px 1px -12px 2px;
+    width: 33px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    &:before {
+        top: -21px;
+        width: 33px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 40px;
+    }
+    &:after {
+        top: 5px;
+        left: 12px;
+        width: 5px;
+        height: 5px;
+        border: 2px solid @back;
+        border-radius: 50%;
+    }
+}
+
+.icon-arrow-up {
+    margin: 14px 8px 2px 8px;
+    width: 18px;
+    height: 18px;
+    border-top: 2px solid @front;
+    border-left: 2px solid @front;
+    transform: rotate(45deg);
+}
+
+.icon-arrow-down {
+    margin: 2px 8px 14px 8px;
+    width: 18px;
+    height: 18px;
+    border-top: 2px solid @front;
+    border-left: 2px solid @front;
+    transform: rotate(-135deg);
+}
+
+.icon-arrow-left {
+    margin: 8px 2px 8px 14px;
+    width: 18px;
+    height: 18px;
+    border-top: 2px solid @front;
+    border-left: 2px solid @front;
+    transform: rotate(-45deg);
+}
+
+.icon-arrow-right {
+    margin: 8px 14px 8px 2px;
+    width: 18px;
+    height: 18px;
+    border-top: 2px solid @front;
+    border-left: 2px solid @front;
+    transform: rotate(135deg);
+}
+
+.icon-upload {
+    margin: 19px 4px 6px 4px;
+    width: 20px;
+    height: 7px;
+    border: solid @front;
+    border-width: 0 4px 4px 4px;
+    &:before {
+        left: 8px;
+        top: -7px;
+        width: 4px;
+        height: 11px;
+        box-shadow: inset 0 0 0 11px;
+    }
+    &:after {
+        left: 2px;
+        top: -14px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 8px 8px 8px;
+        border-color: transparent transparent @front transparent;
+    }
+}
+
+.icon-download {
+    margin: 19px 4px 6px 4px;
+    width: 20px;
+    height: 7px;
+    border: solid @front;
+    border-width: 0 4px 4px 4px;
+    &:before {
+        left: 8px;
+        top: -14px;
+        width: 4px;
+        height: 11px;
+        box-shadow: inset 0 0 0 11px;
+    }
+    &:after {
+        left: 2px;
+        top: -4px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 8px 0 8px;
+        border-color: @front transparent transparent transparent;
+    }
+}
+
+.icon-search {
+    margin: 5px;
+    width: 26px;
+    height: 26px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px;
+    &:before {
+        top: 5px;
+        left: 6px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid @front;
+        border-radius: 50%;
+    }
+    &:after {
+        top: 16px;
+        left: 17px;
+        width: 3px;
+        height: 6px;
+        border-radius: 2px;
+        transform: rotate(-40deg);
+        box-shadow: inset 0 0 0 7px;
+    }
+}
+
+.icon-output {
+    margin: 4px 7px;
+    width: 18px;
+    height: 24px;
+    border: 2px solid;
+    border-radius: 3px;
+    &:before {
+        top: 10px;
+        width: 9px;
+        height: 4px;
+        box-shadow: inset 0 0 0 10px;
+    }
+    &:after {
+        top: 8px;
+        left: 8px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent transparent transparent @front;
+        border-width: 4px 6px;
+    }
+}
+
+.icon-doc {
+    margin: 4px 7px;
+    width: 22px;
+    height: 28px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 28px;
+    &:before {
+        width: 0;
+        height: 0;
+        top: -1px;
+        left: 15px;
+        border-style: solid;
+        border-width: 3px 4px;
+        border-color: @back @back @front @front;
+        box-shadow: 0 0 0 1px @back;
+    }
+    &:after {
+        width: 12px;
+        height: 1px;
+        left: 5px;
+        top: 8px;
+        box-shadow: inset 0 0 0 12px @back, 0 4px 0 0 @back, 0 8px 0 0 @back, 0 12px 0 0 @back;
+    }
+}
+
+.icon-delete {
+    margin: 16px 16px 8px;
+    width: 4px;
+    height: 12px;
+    box-shadow: inset 0 0 0 @back, -7px 0 0 0 @back, 7px 0 0 0 @back, 0 0 0 3px, -6px 0 0 3px, 6px 0 0 3px;
+    &:before {
+        top: -8px;
+        left: -11px;
+        width: 26px;
+        height: 2px;
+        border-radius: 4px;
+        box-shadow: inset 0 0 26px, 0 4px 0 1px;
+    }
+    &:after {
+        top: -11px;
+        left: -9px;
+        width: 20px;
+        height: 1px;
+        border-style: solid;
+        border-width: 0 1px 2px 1px;
+        border-color: transparent transparent @front transparent;
+        box-shadow: inset 7px 0 0 -1px @back, inset -7px 0 0 -1px @back, inset 0 0 0 20px;
+    }
+}
+
+.icon-card {
+    margin: 8px 4px;
+    width: 28px;
+    height: 20px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 28px;
+    &:before {
+        width: 4px;
+        height: 4px;
+        left: 22px;
+        top: 3px;
+        box-shadow: inset 0 0 0 4px @back;
+    }
+    &:after {
+        width: 14px;
+        height: 2px;
+        left: 7px;
+        top: 9px;
+        box-shadow: inset 0 0 0 14px @back, 0 5px 0 0 @back;
+    }
+}
+
+.icon-calculator {
+    margin: 4px 7px;
+    width: 22px;
+    height: 28px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 28px;
+    &:before {
+        content:'7' !important;
+        font-size: 12px;
+        color: @front;
+        line-height: 10px;
+        text-align: center;
+        width: 16px;
+        height: 10px;
+        left: 3px;
+        top: 2px;
+        background: @back;
+    }
+    &:after {
+        width: 4px;
+        height: 4px;
+        border-radius: 1px;
+        top: 15px;
+        left: 3px;
+        box-shadow: inset 0 0 0 4px @back, 6px 0 0 0 @back, 12px 0 0 0 @back, 0 6px 0 0 @back, 6px 6px 0 0 @back, 12px 6px 0 0 @back;
+    }
+}
+
+.icon-task {
+    margin: 25px 10px 10px 10px;
+    width: 16px;
+    height: 1px;
+    box-shadow: inset -10px 0 0 -1px, inset 0 0 0 16px @back, 7px -5px 0 0, 0 -5px 0 0 @back, 0 -10px 0 0 @back, 0 -14px 0 0 @back, 0 -15px 0 0 @back, 0 -5px 0 3px, 0 2px 0 3px, 0 -12px 0 3px, 0 -17px 0 3px;
+    &:before {
+        top: -5px;
+        left: 12px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 12px, 0 0 0 2px @back;
+    }
+    &:after {
+        top: -1px;
+        left: 14px;
+        width: 6px;
+        height: 2px;
+        border-radius: 2px;
+        border-bottom: 2px solid @back;
+        border-left: 2px solid @back;
+        transform: rotate(-40deg);
+    }
+}
+
+.icon-lock {
+    margin: 8px 14px 19px 15px;
+    width: 7px;
+    height: 9px;
+    border-top-left-radius: 50% 2px;
+    border-top-right-radius: 50% 2px;
+    box-shadow: 0 0 0 4px;
+    &:before {
+        top: 9px;
+        left: -8px;
+        width: 23px;
+        height: 15px;
+        border-radius: ~"3px / 2px 2px 3px 3px";
+        box-shadow: inset 0 0 0 23px;
+    }
+    &:after {
+        top: 18px;
+        left: 2px;
+        width: 3px;
+        height: 3px;
+        border-radius: 3px;
+        box-shadow: inset 0 0 0 5px @back, 0 -4px 0 2px @back;
+    }
+}
+
+.icon-unlock {
+    margin: 8px 14px 19px 15px;
+    width: 7px;
+    height: 9px;
+    border-top-left-radius: 50% 2px;
+    border-top-right-radius: 50% 2px;
+    box-shadow: 0 0 0 4px;
+    &:before {
+        top: 9px;
+        left: -8px;
+        width: 23px;
+        height: 15px;
+        border-radius: ~"3px / 2px 2px 3px 3px";
+        box-shadow: inset 0 0 0 23px, -10px -3px 0 0 @back;
+    }
+    &:after {
+        top: 18px;
+        left: 2px;
+        width: 3px;
+        height: 3px;
+        border-radius: 3px;
+        box-shadow: inset 0 0 0 5px @back, 0 -4px 0 2px @back;
+    }
+}
+
+.icon-openlock {
+    margin: 8px 3px 19px 26px;
+    width: 7px;
+    height: 9px;
+    border-top-left-radius: 50% 2px;
+    border-top-right-radius: 50% 2px;
+    box-shadow: 0 0 0 4px;
+    &:before {
+        top: 9px;
+        left: -19px;
+        width: 23px;
+        height: 15px;
+        border-radius: ~"3px / 2px 2px 3px 3px";
+        box-shadow: inset 0 0 0 23px, 20px -2px 0 0 @back;
+    }
+    &:after {
+        top: 18px;
+        left: -9px;
+        width: 3px;
+        height: 3px;
+        border-radius: 3px;
+        box-shadow: inset 0 0 0 5px @back, 0 -4px 0 2px @back;
+    }
+}
+
+.icon-clock {
+    margin: 4px 3px 3px 4px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: 4px solid @front;
+    &:before {
+        width: 3px;
+        height: 10px;
+        left: 10px;
+        top: 3px;
+        border-radius: 2px;
+        box-shadow: inset 0 0 0 10px;
+    }
+    &:after {
+        width: 8px;
+        height: 3px;
+        left: 5px;
+        top: 10px;
+        border-radius: 2px;
+        box-shadow: inset 0 0 0 10px;
+    }
+}
+
+.icon-move {
+    margin: 5px 6px 7px 6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 24px, 2px 3px 0 0;
+    &:before {
+        left: 12px;
+        top: 7px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 7px;
+        border-color: transparent transparent transparent @back;
+    }
+    &:after {
+        left: 22px;
+        top: 24px;
+        width: 2px;
+        height: 2px;
+        box-shadow: inset 0 0 0 2px @back,
+            -2px 0 0 0 @back,
+            -4px 0 0 0 @back,
+            -6px 0 0 0 @back,
+            -8px 0 0 0 @back,
+            -10px 0 0 0 @back,
+            -12px 0 0 0 @back,
+            -14px 0 0 0 @back,
+            -16px 0 0 0 @back,
+            -18px 0 0 0 @back,
+            -19px 0 0 0 @back,
+            0px -2px 0 0 @back,
+            0px -4px 0 0 @back,
+            0px -6px 0 0 @back,
+            0px -8px 0 0 @back,
+            0px -10px 0 0 @back,
+            0px -12px 0 0 @back,
+            0px -14px 0 0 @back,
+            0px -16px 0 0 @back,
+            0px -18px 0 0 @back,
+            0px -19px 0 0 @back,
+            -12px -12px 0 0 @back,
+            -14px -12px 0 0 @back,
+            -16px -12px 0 0 @back,
+            -17px -12px 0 0 @back;
+    }
+}
+
+.icon-re {
+    margin: 5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 4px solid @front;
+    &:after {
+        top: -5px;
+        left: 9px;
+        border: 6px solid;
+        border-color: transparent @front @front transparent;
+    }
+    &:before {
+        top: 2px;
+        left: 9px;
+        width: 15px;
+        height: 10px;
+        box-shadow: inset 0 0 0 12px @back;
+    }
+}
+
+.icon-folder {
+    margin: 8px 5px 1px 6px;
+    width: 23px;
+    height: 17px;
+    border-style: solid;
+    border-width: 5px 1px;
+    border-color: @front transparent transparent transparent;
+    &:before {
+        top: 2px;
+        left: -3px;
+        width: 17px;
+        height: 0;
+        border-style: solid;
+        border-width: 16px 6px;
+        border-color: @front transparent transparent transparent;
+    }
+    &:after {
+        top: -6px;
+        left: 11px;
+        width: 20px;
+        height: 2px;
+        box-shadow: inset 0 0 0 20px @back;
+    }
+}
+
+.icon-blocks {
+    margin: 4px 20px 20px 4px;
+    width: 12px;
+    height: 12px;
+    box-shadow: inset 0 0 0 12px, 16px 0 0 0, 0 16px 0 0, 16px 16px 0 0;
+}
+
+.icon-list {
+    margin: 4px 25px 25px 4px;
+    width: 7px;
+    height: 7px;
+    box-shadow: inset 0 0 0 7px, 0 10px 0 0, 0 20px 0 0;
+    &:before {
+        top: 0;
+        left: 10px;
+        width: 18px;
+        height: 2px;
+        box-shadow: inset 0 0 0 18px, 0 5px 0 0, 0 10px 0 0, 0 15px 0 0, 0 20px 0 0, 0 25px 0 0;
+    }
+}
+
+.icon-doc2 {
+    margin: 4px;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 28px;
+    &:before {
+        top: 7px;
+        left: 5px;
+        width: 18px;
+        height: 4px;
+        box-shadow: inset 0 0 0 18px @back, 0 6px 0 0 @back, 0 12px 0 0 @back;
+    }
+    &:after {
+        top: 0;
+        left: 20px;
+        border: 4px solid;
+        border-color: @back @back @front @front;
+        box-shadow: 0 0 0 1px @back, 0 0 0 3px @front;
+    }
+}
+
+.icon-user {
+    margin: -6px 4px 4px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 9px 4px;
+    border-color: transparent transparent @front transparent;
+    &:before {
+        left: -10px;
+        top: 17px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 40px;
+    }
+    &:after {
+        top: 2px;
+        left: 3px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 14px;
+    }
+}
+
+.icon-list2 {
+    margin: 9px 26px 24px 6px;
+    width: 4px;
+    height: 3px;
+    box-shadow: inset 0 0 0 4px, 0 7px 0 0, 0 14px 0 0;
+    &:before {
+        left: 7px;
+        top: 0;
+        width: 17px;
+        height: 3px;
+        box-shadow: inset 0 0 0 17px, 0 7px 0 0, 0 14px 0 0;
+    }
+}
+
+.icon-sale {
+    margin: 4px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 28px;
+    &:before {
+        content: "惠" !important;
+        font-family: "Microsoft Yahei";
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        top: 4px;
+        left: 4px;
+        width: 20px;
+        height: 20px;
+        color: @back;
+    }
+}
+
+.icon-search2 {
+    margin: 7px 6px 6px 7px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 3px solid @front;
+    &:before {
+        top: 14px;
+        left: 15px;
+        width: 5px;
+        height: 12px;
+        border-radius: 2px;
+        transform: rotate(-40deg);
+        box-shadow: inset 0 0 0 12px;
+    }
+}
+
+.icon-ticket {
+    margin: 8px 4px 9px 4px;
+    width: 28px;
+    height: 19px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 28px;
+    &:before {
+        top: 3px;
+        left: 7px;
+        width: 14px;
+        height: 3px;
+        border-radius: 2px;
+        box-shadow: inset 0 0 0 14px @back, 0 5px 0 0 @back, 0 10px 0 0 @back;
+    }
+    &:after {
+        top: 7px;
+        left: -3px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 5px @back, 29px 0 0 0 @back;
+    }
+}
