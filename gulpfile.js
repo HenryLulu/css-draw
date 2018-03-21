@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 gulp.task('default', ['less', 'html']);
 
 gulp.task('less', function () {
-    return gulp.src(['*/*.less'])
+    return gulp.src(['src/*/*.less'])
         .pipe(less())
         .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions', '> 1%', 'ie 9'] }) ]))
         .pipe(minifyCSS())
@@ -18,7 +18,7 @@ gulp.task('less', function () {
 });
 
 gulp.task('html', function () {
-    return gulp.src(['*/*.html'])
+    return gulp.src(['src/*/*.html'])
         .pipe(gulp.dest('./build'));
 });
 
