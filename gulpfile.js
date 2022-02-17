@@ -27,5 +27,5 @@ gulp.task('clear', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['*/*.less'], ['less']);
+    gulp.watch(['**/*.less', '**/*.html'], ['less', 'html']);
 });
